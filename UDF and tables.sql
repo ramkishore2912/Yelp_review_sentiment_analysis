@@ -24,7 +24,7 @@ $$;
 create or replace table yelp_reviews (review_text variant)
 
 COPY INTO yelp_reviews
-FROM 's3://namastesql/yelp/'
+FROM 's3://review_analysis/yelp/'
 CREDENTIALS = (
     AWS_KEY_ID = '***************'
     AWS_SECRET_KEY = '**************'
@@ -45,7 +45,7 @@ from yelp_reviews
 create or replace table yelp_businesses (business_text variant)
 
 COPY INTO yelp_businesses
-FROM 's3://namastesql/yelp/yelp_academic_dataset_business.json'
+FROM 's3://review_analysis/yelp/yelp_academic_dataset_business.json'
 CREDENTIALS = (
     AWS_KEY_ID = '********'
     AWS_SECRET_KEY = '****************'
